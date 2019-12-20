@@ -1,0 +1,30 @@
+{
+    "name": "Tinder gold seeker",
+    "description": "Let you see what you can't see.",
+    "version": "2.0",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "storage",
+        "http://*/",
+        "https://*/"
+    ],
+    "browser_action": {
+        "default_title": "Tinder gold seeker",
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "contentscript.js"
+            ],
+            "matches": [
+                "https://tinder.com/app/likes-you**"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "inject.css",
+        "script.js"
+    ]
+}
